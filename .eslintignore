@@ -1,0 +1,6 @@
+/dist/
+/docs/
+/node_modules/
+/test/unit/coverage/
+/*.js
+/*.ts
