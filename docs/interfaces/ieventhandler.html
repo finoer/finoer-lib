@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HelloWorld | @finoer/finoer-lib</title>
+	<title>IEventHandler | @finoer/finoer-lib</title>
 	<meta name="description" content="Documentation for @finoer/finoer-lib">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="helloworld.html">HelloWorld</a>
+					<a href="ieventhandler.html">IEventHandler</a>
 				</li>
 			</ul>
-			<h1>Class HelloWorld</h1>
+			<h1>Interface IEventHandler&lt;TSender, TArgs&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -68,59 +68,86 @@
 		<div class="col-8 col-content">
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Interface for event handlers.</p>
+					</div>
 					<dl class="tsd-comment-tags">
-						<dt>description</dt>
-						<dd><p>example class</p>
-						</dd>
-						<dt>author</dt>
-						<dd><p>xxx</p>
-						</dd>
-						<dt>since</dt>
-						<dd><p>2020.01.01</p>
+						<dt>export</dt>
+						<dd></dd>
+						<dt>interface</dt>
+						<dd><p>IEventHandler</p>
 						</dd>
 					</dl>
 				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>TSender</h4>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The sender type.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<h4>TArgs</h4>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The arguments type.</p>
+							</div>
+						</div>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">HelloWorld</span>
+						<span class="target">IEventHandler</span>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="helloworld.html#write" class="tsd-kind-icon">write</a></li>
+			<section class="tsd-panel">
+				<h3 class="tsd-before-signature">Callable</h3>
+				<ul class="tsd-signatures tsd-kind-interface tsd-has-type-parameter">
+					<li class="tsd-signature tsd-kind-icon">__call<span class="tsd-signature-symbol">(</span>sender<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TSender</span>, args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TArgs</span>, ev<span class="tsd-signature-symbol">: </span><a href="ieventmanagement.html" class="tsd-signature-type">IEventManagement</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in finoer/core/event/core/interfaces/IEventHandler.ts:10</li>
 							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="write" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> write</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/ab33786/src/HelloWorld.ts#L7">HelloWorld.ts:7</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
-						</li>
-					</ul>
-				</section>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Interface for event handlers.</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>export</dt>
+								<dd></dd>
+								<dt>interface</dt>
+								<dd><p>IEventHandler</p>
+								</dd>
+							</dl>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>sender: <span class="tsd-signature-type">TSender</span></h5>
+							</li>
+							<li>
+								<h5>args: <span class="tsd-signature-type">TArgs</span></h5>
+							</li>
+							<li>
+								<h5>ev: <a href="ieventmanagement.html" class="tsd-signature-type">IEventManagement</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
 			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -134,73 +161,68 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="dispatcherbase.html" class="tsd-kind-icon">Dispatcher<wbr>Base</a>
+						<a href="../classes/dispatcherbase.html" class="tsd-kind-icon">Dispatcher<wbr>Base</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="dispatcherwrapper.html" class="tsd-kind-icon">Dispatcher<wbr>Wrapper</a>
+						<a href="../classes/dispatcherwrapper.html" class="tsd-kind-icon">Dispatcher<wbr>Wrapper</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="eventdispatcher.html" class="tsd-kind-icon">Event<wbr>Dispatcher</a>
+						<a href="../classes/eventdispatcher.html" class="tsd-kind-icon">Event<wbr>Dispatcher</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="eventhandlingbase.html" class="tsd-kind-icon">Event<wbr>Handling<wbr>Base</a>
+						<a href="../classes/eventhandlingbase.html" class="tsd-kind-icon">Event<wbr>Handling<wbr>Base</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="eventlist.html" class="tsd-kind-icon">Event<wbr>List</a>
+						<a href="../classes/eventlist.html" class="tsd-kind-icon">Event<wbr>List</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="eventlistbase.html" class="tsd-kind-icon">Event<wbr>List<wbr>Base</a>
+						<a href="../classes/eventlistbase.html" class="tsd-kind-icon">Event<wbr>List<wbr>Base</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="eventmanagement.html" class="tsd-kind-icon">Event<wbr>Management</a>
+						<a href="../classes/eventmanagement.html" class="tsd-kind-icon">Event<wbr>Management</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/helloworld.html" class="tsd-kind-icon">Hello<wbr>World</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/main.html" class="tsd-kind-icon">Main</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/nonuniformeventlist.html" class="tsd-kind-icon">Non<wbr>Uniform<wbr>Event<wbr>List</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/oper.html" class="tsd-kind-icon">Oper</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/queue.html" class="tsd-kind-icon">Queue</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/subscription.html" class="tsd-kind-icon">Subscription</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="ibaseeventhandling.html" class="tsd-kind-icon">IBase<wbr>Event<wbr>Handling</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="ievent.html" class="tsd-kind-icon">IEvent</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="helloworld.html" class="tsd-kind-icon">Hello<wbr>World</a>
-						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="helloworld.html#write" class="tsd-kind-icon">write</a>
-							</li>
-						</ul>
+					<li class="current tsd-kind-interface tsd-has-type-parameter">
+						<a href="ieventhandler.html" class="tsd-kind-icon">IEvent<wbr>Handler</a>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="main.html" class="tsd-kind-icon">Main</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="nonuniformeventlist.html" class="tsd-kind-icon">Non<wbr>Uniform<wbr>Event<wbr>List</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="oper.html" class="tsd-kind-icon">Oper</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="queue.html" class="tsd-kind-icon">Queue</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="subscription.html" class="tsd-kind-icon">Subscription</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/ibaseeventhandling.html" class="tsd-kind-icon">IBase<wbr>Event<wbr>Handling</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/ievent.html" class="tsd-kind-icon">IEvent</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/ieventhandler.html" class="tsd-kind-icon">IEvent<wbr>Handler</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/ieventhandling.html" class="tsd-kind-icon">IEvent<wbr>Handling</a>
+						<a href="ieventhandling.html" class="tsd-kind-icon">IEvent<wbr>Handling</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/ieventmanagement.html" class="tsd-kind-icon">IEvent<wbr>Management</a>
+						<a href="ieventmanagement.html" class="tsd-kind-icon">IEvent<wbr>Management</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/ioper.html" class="tsd-kind-icon">IOper</a>
+						<a href="ioper.html" class="tsd-kind-icon">IOper</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/isubscribable.html" class="tsd-kind-icon">ISubscribable</a>
+						<a href="isubscribable.html" class="tsd-kind-icon">ISubscribable</a>
 					</li>
 				</ul>
 			</nav>

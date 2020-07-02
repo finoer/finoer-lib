@@ -1,6 +1,6 @@
 import Queue from './Queue';
 
-interface IOper
+export default interface IOper
 {
     /**
      * Execute right now

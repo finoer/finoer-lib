@@ -1,5 +1,6 @@
 import HelloWorld from './HelloWorld'
 
+
 class Main {
   constructor() {
     console.log(HelloWorld.write())
@@ -7,3 +8,5 @@ class Main {
 }
 
 export { Main, HelloWorld }
+export { 
+}
