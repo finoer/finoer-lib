@@ -33,7 +33,7 @@ export default class Oper implements IOper {
      */		
     public result(event:any):void
     {
-
+      console.log(event)
     }
     
     /**
@@ -42,7 +42,7 @@ export default class Oper implements IOper {
      */		
     public fault(event:any):void
     {
-
+      console.log(event)
     }
     
     /**
@@ -53,7 +53,7 @@ export default class Oper implements IOper {
      */
     commit(queue:Queue|null):void
     {
-
+      console.log(queue)
     }
     
     /**

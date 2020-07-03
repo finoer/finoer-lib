@@ -16,7 +16,7 @@
   "main": "dist/finoer-lib.umd.min.js",
   "module": "dist/finoer-lib.es.js",
   "cjsmodule": "dist/finoer-lib.cjs.js",
-  "typings": "dist/types/finoer-lib.d.ts",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist",
     "src"

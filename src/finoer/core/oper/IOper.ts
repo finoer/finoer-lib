@@ -1,6 +1,6 @@
 import Queue from './Queue';
 
-export default interface IOper
+interface IOper
 {
     /**
      * Execute right now
@@ -34,3 +34,5 @@ export default interface IOper
      */
     halt():void
 }
+
+export default IOper
