@@ -1,12 +1,14 @@
-// import HelloWorld from './HelloWorld'
+import HelloWorld from './HelloWorld'
 //
-
 
 class Main {
   constructor() {
-    console.log('3333444', )
+    console.log('3333',)
+  }
+  getName() {
+    console.log(111)
   }
 }
 
 
-export default Main 
+export { Main, HelloWorld }
