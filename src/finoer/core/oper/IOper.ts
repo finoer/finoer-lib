@@ -1,38 +1,40 @@
-import Queue from './Queue';
+import Queue from './Queue'
 
-interface IOper
-{
+interface IOper {
     /**
      * Execute right now
-     * 
-     */		
-    execute():void
-    
+     *
+     */
+
+    execute(): void
+
     /**
      * Succeed Function
-     * 
-     */		
-    result(event:any):void
-    
+     *
+     */
+
+    result(result: any): void
+
     /**
      * Fault Function
-     * 
-     */		
-    fault(event:any):void
-    
+     *
+     */
+
+    fault(result: any): void
+
     /**
      * Push to queue
-     * 
+     *
      * @param queue	used queue, if null, use the default one.
-     * 
+     *
      */
-    commit(queue:Queue|null):void
-    
+    commit(queue?: Queue): void
+
     /**
      * Halt queue
-     * 
+     *
      */
-    halt():void
+    halt(): void
 }
 
 export default IOper
