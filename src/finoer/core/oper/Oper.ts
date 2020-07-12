@@ -1,7 +1,7 @@
 import IOper from './IOper'
-import Queue from './Queue'
 import EventDispatcher from '../event/core/EventDispatcher'
 import OperEvent from './OperEvent'
+import IEventManagement from '../event/core/IEventManagement'
 
 /**
  * @description Oper
@@ -89,7 +89,6 @@ export default abstract class Oper extends EventDispatcher<Oper, OperEvent>
             }
         }
     }
-
     /**
      * Succeed Function
      *
@@ -172,5 +171,119 @@ export default abstract class Oper extends EventDispatcher<Oper, OperEvent>
     public halt(): void {
         this.end()
         if (this.queue) this.queue.haltChild(this)
+    }
+}
+
+/**
+ * @description Queue
+ * Use defaultQueue will create defult queue.
+ * @author wavesnow
+ * @since 2020.01.01
+ */
+export class Queue extends Oper {
+    private static _defaultQueue: Queue
+
+    /**
+     * Sub Oper Array
+     */
+    public children: Array<Oper> = []
+
+    constructor(children?: Array<Oper>) {
+        super()
+        if (!children) children = []
+        this.children = children
+    }
+
+    /**
+     * Default Queue
+     */
+
+    public static get defaultQueue(): Queue {
+        if (!Queue._defaultQueue) Queue._defaultQueue = new Queue()
+        return Queue._defaultQueue
+    }
+
+    /**
+     * Commit to Queue
+     *
+     */
+
+    public commitChild(obj: Oper): void {
+        obj.queue = this
+        obj.step = Oper.WAIT
+        this.children.push(obj)
+        if (this.children.length == 1) this.doLoad()
+    }
+
+    /**
+     * Move out of Queue
+     *
+     */
+    public haltChild(obj: Oper): void {
+        obj.queue = undefined
+        obj.step = Oper.NONE
+
+        var index: number = this.children.indexOf(obj)
+        if (index == -1) return
+
+        if (index == 0) this.nexthandler()
+        else this.children.splice(index, 1)
+    }
+
+    private doLoad(): void {
+        if (this.children.length > 0) {
+            var oper: Oper = this.children[0]
+            oper.subscribe((s: Oper, type: OperEvent, ev: IEventManagement) => {
+                //console.log(s, type)
+                if (
+                    type.type == OperEvent.OPERATION_COMPLETE ||
+                    type.type == OperEvent.OPERATION_ERROR
+                ) {
+                    this.nexthandler()
+                }
+            }).bind(this)
+            oper.execute()
+        } else {
+            this.result()
+        }
+    }
+
+    private nexthandler(event?: OperEvent | undefined): void {
+        var oper: Oper = this.children[0]
+        oper.unsubscribe((s: Oper, type: OperEvent, ev: IEventManagement) => {
+            if (
+                type.type == OperEvent.OPERATION_COMPLETE ||
+                type.type == OperEvent.OPERATION_ERROR
+            ) {
+                ev.unsub()
+            }
+        })
+
+        this.children.shift()
+
+        if (
+            oper.continueWhenFail ||
+            (event && event.type == OperEvent.OPERATION_COMPLETE)
+        )
+            this.doLoad()
+    }
+
+    public commit(queue?: Queue): void {
+        if (!queue) queue = Queue.defaultQueue
+        if (queue != this) super.commit(queue)
+    }
+
+    public execute(): void {
+        super.execute()
+        this.doLoad()
+    }
+
+    public halt(): void {
+        super.halt()
+
+        if (this.children.length > 0) {
+            this.children = this.children.slice(0, 1)
+            this.children[0].halt()
+        }
     }
 }

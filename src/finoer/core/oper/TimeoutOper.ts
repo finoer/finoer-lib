@@ -21,8 +21,15 @@ export default class TimeoutOper extends Oper {
     execute(): void {
         if (this.timeout > 0) {
             if (this.alawaySuccess)
-                this.timeId = window.setTimeout(this.result, this.timeout)
-            else this.timeId = window.setTimeout(this.fault, this.timeout)
+                this.timeId = window.setTimeout(
+                    this.result.bind(this),
+                    this.timeout
+                )
+            else
+                this.timeId = window.setTimeout(
+                    this.fault.bind(this),
+                    this.timeout
+                )
         }
 
         super.execute()
