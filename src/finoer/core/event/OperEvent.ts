@@ -1,4 +1,4 @@
-import Oper from './Oper'
+import Oper from '../oper/Oper'
 
 export default class OperEvent {
     public type: string

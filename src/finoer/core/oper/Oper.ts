@@ -1,6 +1,6 @@
 import IOper from './IOper'
 import EventDispatcher from '../event/core/EventDispatcher'
-import OperEvent from './OperEvent'
+import OperEvent from '../event/OperEvent'
 import IEventManagement from '../event/core/IEventManagement'
 
 /**
@@ -23,7 +23,7 @@ export default abstract class Oper extends EventDispatcher<Oper, OperEvent>
     /**
      * ID
      */
-    public id: string | undefined
+    public id: string = ''
 
     /**
      * Current Queue
