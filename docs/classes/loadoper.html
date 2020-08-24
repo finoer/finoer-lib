@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Queue | @finoer/finoer-lib</title>
+	<title>LoadOper | @finoer/finoer-lib</title>
 	<meta name="description" content="Documentation for @finoer/finoer-lib">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,40 +56,24 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="queue.html">Queue</a>
+					<a href="loadoper.html">LoadOper</a>
 				</li>
 			</ul>
-			<h1>Class Queue</h1>
+			<h1>Class LoadOper</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<dl class="tsd-comment-tags">
-						<dt>description</dt>
-						<dd><p>Queue
-							Use defaultQueue will create defult queue.</p>
-						</dd>
-						<dt>author</dt>
-						<dd><p>wavesnow</p>
-						</dd>
-						<dt>since</dt>
-						<dd><p>2020.01.01</p>
-						</dd>
-					</dl>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="oper.html" class="tsd-signature-type">Oper</a>
+						<a href="retryoper.html" class="tsd-signature-type">RetryOper</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">Queue</span>
+								<span class="target">LoadOper</span>
 							</li>
 						</ul>
 					</li>
@@ -110,58 +94,73 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="queue.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="loadoper.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="queue.html#children" class="tsd-kind-icon">children</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#continuewhenfail" class="tsd-kind-icon">continue<wbr>When<wbr>Fail</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#immediately" class="tsd-kind-icon">immediately</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#lastresult" class="tsd-kind-icon">last<wbr>Result</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#queue-1" class="tsd-kind-icon">queue</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#step" class="tsd-kind-icon">step</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="queue.html#end" class="tsd-kind-icon">END</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="queue.html#none" class="tsd-kind-icon">NONE</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="queue.html#run" class="tsd-kind-icon">RUN</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="queue.html#wait" class="tsd-kind-icon">WAIT</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static"><a href="queue.html#_defaultqueue" class="tsd-kind-icon">_default<wbr>Queue</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="loadoper.html#_name" class="tsd-kind-icon">_name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#alawaysuccess" class="tsd-kind-icon">alaway<wbr>Success</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#continuewhenfail" class="tsd-kind-icon">continue<wbr>When<wbr>Fail</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="loadoper.html#dataformat" class="tsd-kind-icon">data<wbr>Format</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#immediately" class="tsd-kind-icon">immediately</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#lastresult" class="tsd-kind-icon">last<wbr>Result</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#maxretry" class="tsd-kind-icon">max<wbr>Retry</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="loadoper.html#parentdom" class="tsd-kind-icon">parent<wbr>Dom</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#queue" class="tsd-kind-icon">queue</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#retry" class="tsd-kind-icon">retry</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#step" class="tsd-kind-icon">step</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="loadoper.html#stopatinit" class="tsd-kind-icon">stop<wbr>AtInit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#timeout" class="tsd-kind-icon">timeout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="loadoper.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="loadoper.html#url" class="tsd-kind-icon">url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="loadoper.html#xhrrequest" class="tsd-kind-icon">xhrrequest</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="loadoper.html#ajax" class="tsd-kind-icon">AJAX</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="loadoper.html#auto" class="tsd-kind-icon">AUTO</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="loadoper.html#end" class="tsd-kind-icon">END</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="loadoper.html#loader_type" class="tsd-kind-icon">LOADER_<wbr>TYPE</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="loadoper.html#none" class="tsd-kind-icon">NONE</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="loadoper.html#run" class="tsd-kind-icon">RUN</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="loadoper.html#script" class="tsd-kind-icon">SCRIPT</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="loadoper.html#wait" class="tsd-kind-icon">WAIT</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="loadoper.html#postfix" class="tsd-kind-icon">postfix</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#count" class="tsd-kind-icon">count</a></li>
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="queue.html#defaultqueue" class="tsd-kind-icon">default<wbr>Queue</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#count" class="tsd-kind-icon">count</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="loadoper.html#data" class="tsd-kind-icon">data</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class"><a href="loadoper.html#name" class="tsd-kind-icon">name</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="queue.html#_dispatch" class="tsd-kind-icon">_dispatch</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="queue.html#asevent" class="tsd-kind-icon">as<wbr>Event</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="queue.html#cleanup" class="tsd-kind-icon">cleanup</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#clear" class="tsd-kind-icon">clear</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="queue.html#commit" class="tsd-kind-icon">commit</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="queue.html#commitchild" class="tsd-kind-icon">commit<wbr>Child</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#dispatch" class="tsd-kind-icon">dispatch</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#dispatchasync" class="tsd-kind-icon">dispatch<wbr>Async</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="queue.html#doload" class="tsd-kind-icon">do<wbr>Load</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#end-1" class="tsd-kind-icon">end</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="queue.html#execute" class="tsd-kind-icon">execute</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#fault" class="tsd-kind-icon">fault</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="queue.html#halt" class="tsd-kind-icon">halt</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="queue.html#haltchild" class="tsd-kind-icon">halt<wbr>Child</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#has" class="tsd-kind-icon">has</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="queue.html#nexthandler" class="tsd-kind-icon">nexthandler</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#one" class="tsd-kind-icon">one</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#result" class="tsd-kind-icon">result</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#sub" class="tsd-kind-icon">sub</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#unsub" class="tsd-kind-icon">unsub</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="queue.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="loadoper.html#_dispatch" class="tsd-kind-icon">_dispatch</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="loadoper.html#asevent" class="tsd-kind-icon">as<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="loadoper.html#changehandler" class="tsd-kind-icon">change<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="loadoper.html#cleanup" class="tsd-kind-icon">cleanup</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#clear" class="tsd-kind-icon">clear</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#commit" class="tsd-kind-icon">commit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#dispatch" class="tsd-kind-icon">dispatch</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#dispatchasync" class="tsd-kind-icon">dispatch<wbr>Async</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited"><a href="loadoper.html#end-1" class="tsd-kind-icon">end</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="loadoper.html#execute" class="tsd-kind-icon">execute</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="loadoper.html#fault" class="tsd-kind-icon">fault</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="loadoper.html#halt" class="tsd-kind-icon">halt</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#has" class="tsd-kind-icon">has</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="loadoper.html#inithandler" class="tsd-kind-icon">init<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="loadoper.html#loadembedclass" class="tsd-kind-icon">load<wbr>Embed<wbr>Class</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#one" class="tsd-kind-icon">one</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="loadoper.html#progresshandler" class="tsd-kind-icon">progress<wbr>Handler</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="loadoper.html#result" class="tsd-kind-icon">result</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#sub" class="tsd-kind-icon">sub</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#unsub" class="tsd-kind-icon">unsub</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="loadoper.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a></li>
 							</ul>
 						</section>
 					</div>
@@ -173,41 +172,68 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Queue<span class="tsd-signature-symbol">(</span>children<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="oper.html" class="tsd-signature-type">Oper</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="queue.html" class="tsd-signature-type">Queue</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Load<wbr>Oper<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, rhandler<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ieventhandler.html" class="tsd-signature-type">IEventHandler</a><span class="tsd-signature-symbol">&lt;</span><a href="oper.html" class="tsd-signature-type">Oper</a><span class="tsd-signature-symbol">, </span><a href="operevent.html" class="tsd-signature-type">OperEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, fhandler<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ieventhandler.html" class="tsd-signature-type">IEventHandler</a><span class="tsd-signature-symbol">&lt;</span><a href="oper.html" class="tsd-signature-type">Oper</a><span class="tsd-signature-symbol">, </span><a href="operevent.html" class="tsd-signature-type">OperEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span>, loadtype<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="loadoper.html" class="tsd-signature-type">LoadOper</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="oper.html">Oper</a>.<a href="oper.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L189">src/finoer/core/oper/Oper.ts:189</a></li>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L84">src/finoer/core/oper/LoaderOper.ts:84</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> children: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="oper.html" class="tsd-signature-type">Oper</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> url: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>path</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> rhandler: <a href="../interfaces/ieventhandler.html" class="tsd-signature-type">IEventHandler</a><span class="tsd-signature-symbol">&lt;</span><a href="oper.html" class="tsd-signature-type">Oper</a><span class="tsd-signature-symbol">, </span><a href="operevent.html" class="tsd-signature-type">OperEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fhandler: <a href="../interfaces/ieventhandler.html" class="tsd-signature-type">IEventHandler</a><span class="tsd-signature-symbol">&lt;</span><a href="oper.html" class="tsd-signature-type">Oper</a><span class="tsd-signature-symbol">, </span><a href="operevent.html" class="tsd-signature-type">OperEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> loadtype: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;script&quot;</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="queue.html" class="tsd-signature-type">Queue</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="loadoper.html" class="tsd-signature-type">LoadOper</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="children" class="tsd-anchor"></a>
-					<h3>children</h3>
-					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="oper.html" class="tsd-signature-type">Oper</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = []</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _name</h3>
+					<div class="tsd-signature tsd-kind-icon">_name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L189">src/finoer/core/oper/Oper.ts:189</a></li>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L46">src/finoer/core/oper/LoaderOper.ts:46</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="alawaysuccess" class="tsd-anchor"></a>
+					<h3>alaway<wbr>Success</h3>
+					<div class="tsd-signature tsd-kind-icon">alaway<wbr>Success<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="timeoutoper.html">TimeoutOper</a>.<a href="timeoutoper.html#alawaysuccess">alawaySuccess</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/TimeoutOper.ts#L17">src/finoer/core/oper/TimeoutOper.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Sub Oper Array</p>
+							<p>If this value is true, will trigger result function when time up.</p>
 						</div>
 					</div>
 				</section>
@@ -224,6 +250,21 @@
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Countinue when fail</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="dataformat" class="tsd-anchor"></a>
+					<h3>data<wbr>Format</h3>
+					<div class="tsd-signature tsd-kind-icon">data<wbr>Format<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L68">src/finoer/core/oper/LoaderOper.ts:68</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Load conent format</p>
 						</div>
 					</div>
 				</section>
@@ -277,7 +318,38 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a name="queue-1" class="tsd-anchor"></a>
+					<a name="maxretry" class="tsd-anchor"></a>
+					<h3>max<wbr>Retry</h3>
+					<div class="tsd-signature tsd-kind-icon">max<wbr>Retry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 3</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="retryoper.html">RetryOper</a>.<a href="retryoper.html#maxretry">maxRetry</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/RetryOper.ts#L12">src/finoer/core/oper/RetryOper.ts:12</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>max retry times</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="parentdom" class="tsd-anchor"></a>
+					<h3>parent<wbr>Dom</h3>
+					<div class="tsd-signature tsd-kind-icon">parent<wbr>Dom<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Document</span><span class="tsd-signature-symbol"> = document</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L74">src/finoer/core/oper/LoaderOper.ts:74</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Window Document</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="queue" class="tsd-anchor"></a>
 					<h3>queue</h3>
 					<div class="tsd-signature tsd-kind-icon">queue<span class="tsd-signature-symbol">:</span> <a href="queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
@@ -289,6 +361,22 @@
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>Current Queue</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="retry" class="tsd-anchor"></a>
+					<h3>retry</h3>
+					<div class="tsd-signature tsd-kind-icon">retry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="retryoper.html">RetryOper</a>.<a href="retryoper.html#retry">retry</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/RetryOper.ts#L17">src/finoer/core/oper/RetryOper.ts:17</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Current retry times</p>
 						</div>
 					</div>
 				</section>
@@ -308,6 +396,102 @@
 						</div>
 					</div>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="stopatinit" class="tsd-anchor"></a>
+					<h3>stop<wbr>AtInit</h3>
+					<div class="tsd-signature tsd-kind-icon">stop<wbr>AtInit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L79">src/finoer/core/oper/LoaderOper.ts:79</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Stop animation when start loading</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="timeout" class="tsd-anchor"></a>
+					<h3>timeout</h3>
+					<div class="tsd-signature tsd-kind-icon">timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="timeoutoper.html">TimeoutOper</a>.<a href="timeoutoper.html#timeout">timeout</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/TimeoutOper.ts#L12">src/finoer/core/oper/TimeoutOper.ts:12</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>timeout time (miliseconds)</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="type" class="tsd-anchor"></a>
+					<h3>type</h3>
+					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = LoadOper.AUTO</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L62">src/finoer/core/oper/LoaderOper.ts:62</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Load type</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="url" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> url</h3>
+					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L84">src/finoer/core/oper/LoaderOper.ts:84</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>URL for loader</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="xhrrequest" class="tsd-anchor"></a>
+					<h3>xhrrequest</h3>
+					<div class="tsd-signature tsd-kind-icon">xhrrequest<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">XMLHttpRequest</span><span class="tsd-signature-symbol"> = new XMLHttpRequest()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L44">src/finoer/core/oper/LoaderOper.ts:44</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Path</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="ajax" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> AJAX</h3>
+					<div class="tsd-signature tsd-kind-icon">AJAX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;ajax&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L21">src/finoer/core/oper/LoaderOper.ts:21</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="auto" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> AUTO</h3>
+					<div class="tsd-signature tsd-kind-icon">AUTO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;auto&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L20">src/finoer/core/oper/LoaderOper.ts:20</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 					<a name="end" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> END</h3>
@@ -318,6 +502,21 @@
 							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L17">src/finoer/core/oper/Oper.ts:17</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="loader_type" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> LOADER_<wbr>TYPE</h3>
+					<div class="tsd-signature tsd-kind-icon">LOADER_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = [&#x27;js&#x27;,&#x27;json&#x27;,&#x27;gif&#x27;,&#x27;png&#x27;,&#x27;jpg&#x27;]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L32">src/finoer/core/oper/LoaderOper.ts:32</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Loader Type for content</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 					<a name="none" class="tsd-anchor"></a>
@@ -341,6 +540,16 @@
 						</ul>
 					</aside>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="script" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> SCRIPT</h3>
+					<div class="tsd-signature tsd-kind-icon">SCRIPT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;script&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L22">src/finoer/core/oper/LoaderOper.ts:22</a></li>
+						</ul>
+					</aside>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
 					<a name="wait" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> WAIT</h3>
@@ -352,15 +561,21 @@
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-					<a name="_defaultqueue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> _default<wbr>Queue</h3>
-					<div class="tsd-signature tsd-kind-icon">_default<wbr>Queue<span class="tsd-signature-symbol">:</span> <a href="queue.html" class="tsd-signature-type">Queue</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="postfix" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> postfix</h3>
+					<div class="tsd-signature tsd-kind-icon">postfix<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L184">src/finoer/core/oper/Oper.ts:184</a></li>
+							<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L27">src/finoer/core/oper/LoaderOper.ts:27</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>i快8，·16
+							URL postfix</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -395,25 +610,67 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
-					<a name="defaultqueue" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> default<wbr>Queue</h3>
-					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> defaultQueue<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="queue.html" class="tsd-signature-type">Queue</a></li>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="data" class="tsd-anchor"></a>
+					<h3>data</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> data<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L201">src/finoer/core/oper/Oper.ts:201</a></li>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L177">src/finoer/core/oper/LoaderOper.ts:177</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Default Queue</p>
+									<p>Data</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="queue.html" class="tsd-signature-type">Queue</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class">
+					<a name="name" class="tsd-anchor"></a>
+					<h3>name</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> name<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> name<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L51">src/finoer/core/oper/LoaderOper.ts:51</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Used for disply in progress bar</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L55">src/finoer/core/oper/LoaderOper.ts:55</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Used for disply in progress bar</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -486,6 +743,29 @@
 						</li>
 					</ul>
 				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="changehandler" class="tsd-anchor"></a>
+					<h3>change<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">change<wbr>Handler<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L138">src/finoer/core/oper/LoaderOper.ts:138</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">Event</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="cleanup" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> cleanup</h3>
@@ -539,53 +819,33 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="commit" class="tsd-anchor"></a>
 					<h3>commit</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">commit<span class="tsd-signature-symbol">(</span>queue<span class="tsd-signature-symbol">?: </span><a href="queue.html" class="tsd-signature-type">Queue</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ioper.html">IOper</a>.<a href="../interfaces/ioper.html#commit">commit</a></p>
-								<p>Overrides <a href="oper.html">Oper</a>.<a href="oper.html#commit">commit</a></p>
+								<p>Inherited from <a href="oper.html">Oper</a>.<a href="oper.html#commit">commit</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L271">src/finoer/core/oper/Oper.ts:271</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queue: <a href="queue.html" class="tsd-signature-type">Queue</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="commitchild" class="tsd-anchor"></a>
-					<h3>commit<wbr>Child</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">commit<wbr>Child<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><a href="oper.html" class="tsd-signature-type">Oper</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L211">src/finoer/core/oper/Oper.ts:211</a></li>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L154">src/finoer/core/oper/Oper.ts:154</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Commit to Queue</p>
+									<p>Push to queue</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>obj: <a href="oper.html" class="tsd-signature-type">Oper</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> queue: <a href="queue.html" class="tsd-signature-type">Queue</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>used queue, if null, use the default one.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -668,48 +928,25 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="doload" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> do<wbr>Load</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">do<wbr>Load<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L233">src/finoer/core/oper/Oper.ts:233</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
 					<a name="end-1" class="tsd-anchor"></a>
 					<h3>end</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="oper.html">Oper</a>.<a href="oper.html#end-1">end</a></p>
+								<p>Inherited from <a href="timeoutoper.html">TimeoutOper</a>.<a href="timeoutoper.html#end-1">end</a></p>
+								<p>Overrides <a href="oper.html">Oper</a>.<a href="oper.html#end-1">end</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L165">src/finoer/core/oper/Oper.ts:165</a></li>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/TimeoutOper.ts#L38">src/finoer/core/oper/TimeoutOper.ts:38</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>End function</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> event: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
+									<h5>event: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -726,35 +963,35 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ioper.html">IOper</a>.<a href="../interfaces/ioper.html#execute">execute</a></p>
-								<p>Overrides <a href="oper.html">Oper</a>.<a href="oper.html#execute">execute</a></p>
+								<p>Overrides <a href="timeoutoper.html">TimeoutOper</a>.<a href="timeoutoper.html#execute">execute</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L276">src/finoer/core/oper/Oper.ts:276</a></li>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L126">src/finoer/core/oper/LoaderOper.ts:126</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Load right now.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="fault" class="tsd-anchor"></a>
 					<h3>fault</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">fault<span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ioper.html">IOper</a>.<a href="../interfaces/ioper.html#fault">fault</a></p>
-								<p>Inherited from <a href="oper.html">Oper</a>.<a href="oper.html#fault">fault</a></p>
+								<p>Overrides <a href="retryoper.html">RetryOper</a>.<a href="retryoper.html#fault">fault</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L125">src/finoer/core/oper/Oper.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L156">src/finoer/core/oper/LoaderOper.ts:156</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Fault Function</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -777,37 +1014,14 @@
 								<p>Implementation of <a href="../interfaces/ioper.html">IOper</a>.<a href="../interfaces/ioper.html#halt">halt</a></p>
 								<p>Overrides <a href="oper.html">Oper</a>.<a href="oper.html#halt">halt</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L281">src/finoer/core/oper/Oper.ts:281</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="haltchild" class="tsd-anchor"></a>
-					<h3>halt<wbr>Child</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">halt<wbr>Child<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><a href="oper.html" class="tsd-signature-type">Oper</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L222">src/finoer/core/oper/Oper.ts:222</a></li>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L169">src/finoer/core/oper/LoaderOper.ts:169</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Move out of Queue</p>
+									<p> Halt download progress, remove form queue.</p>
 								</div>
 							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>obj: <a href="oper.html" class="tsd-signature-type">Oper</a></h5>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -845,25 +1059,42 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="nexthandler" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> nexthandler</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">nexthandler<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">?: </span><a href="operevent.html" class="tsd-signature-type">OperEvent</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="inithandler" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> init<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">init<wbr>Handler<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L251">src/finoer/core/oper/Oper.ts:251</a></li>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L162">src/finoer/core/oper/LoaderOper.ts:162</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> event: <a href="operevent.html" class="tsd-signature-type">OperEvent</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h5>
+									<h5>event: <span class="tsd-signature-type">Event</span></h5>
 								</li>
 							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="loadembedclass" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> load<wbr>Embed<wbr>Class</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Embed<wbr>Class<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L160">src/finoer/core/oper/LoaderOper.ts:160</a></li>
+								</ul>
+							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -914,26 +1145,44 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="progresshandler" class="tsd-anchor"></a>
+					<h3>progress<wbr>Handler</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">progress<wbr>Handler<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ProgressEvent</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L164">src/finoer/core/oper/LoaderOper.ts:164</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <span class="tsd-signature-type">ProgressEvent</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="result" class="tsd-anchor"></a>
 					<h3>result</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/ioper.html">IOper</a>.<a href="../interfaces/ioper.html#result">result</a></p>
-								<p>Inherited from <a href="oper.html">Oper</a>.<a href="oper.html#result">result</a></p>
+								<p>Overrides <a href="oper.html">Oper</a>.<a href="oper.html#result">result</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/Oper.ts#L97">src/finoer/core/oper/Oper.ts:97</a></li>
+									<li>Defined in <a href="https://github.com/finoer/finoer-lib/blob/43e9c2f/src/finoer/core/oper/LoaderOper.ts#L152">src/finoer/core/oper/LoaderOper.ts:152</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Succeed Function</p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -1141,9 +1390,171 @@
 					<li class=" tsd-kind-class">
 						<a href="eventmanagement.html" class="tsd-kind-icon">Event<wbr>Management</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="loadoper.html" class="tsd-kind-icon">Load<wbr>Oper</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="loadoper.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="loadoper.html#_name" class="tsd-kind-icon">_name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#alawaysuccess" class="tsd-kind-icon">alaway<wbr>Success</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#continuewhenfail" class="tsd-kind-icon">continue<wbr>When<wbr>Fail</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="loadoper.html#dataformat" class="tsd-kind-icon">data<wbr>Format</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#immediately" class="tsd-kind-icon">immediately</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#lastresult" class="tsd-kind-icon">last<wbr>Result</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#maxretry" class="tsd-kind-icon">max<wbr>Retry</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="loadoper.html#parentdom" class="tsd-kind-icon">parent<wbr>Dom</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#queue" class="tsd-kind-icon">queue</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#retry" class="tsd-kind-icon">retry</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#step" class="tsd-kind-icon">step</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="loadoper.html#stopatinit" class="tsd-kind-icon">stop<wbr>AtInit</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#timeout" class="tsd-kind-icon">timeout</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="loadoper.html#type" class="tsd-kind-icon">type</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="loadoper.html#url" class="tsd-kind-icon">url</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="loadoper.html#xhrrequest" class="tsd-kind-icon">xhrrequest</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="loadoper.html#ajax" class="tsd-kind-icon">AJAX</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="loadoper.html#auto" class="tsd-kind-icon">AUTO</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="loadoper.html#end" class="tsd-kind-icon">END</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="loadoper.html#loader_type" class="tsd-kind-icon">LOADER_<wbr>TYPE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="loadoper.html#none" class="tsd-kind-icon">NONE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="loadoper.html#run" class="tsd-kind-icon">RUN</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="loadoper.html#script" class="tsd-kind-icon">SCRIPT</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="loadoper.html#wait" class="tsd-kind-icon">WAIT</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="loadoper.html#postfix" class="tsd-kind-icon">postfix</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#count" class="tsd-kind-icon">count</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="loadoper.html#data" class="tsd-kind-icon">data</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class">
+								<a href="loadoper.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="loadoper.html#_dispatch" class="tsd-kind-icon">_dispatch</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="loadoper.html#asevent" class="tsd-kind-icon">as<wbr>Event</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="loadoper.html#changehandler" class="tsd-kind-icon">change<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="loadoper.html#cleanup" class="tsd-kind-icon">cleanup</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#clear" class="tsd-kind-icon">clear</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#commit" class="tsd-kind-icon">commit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#dispatch" class="tsd-kind-icon">dispatch</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#dispatchasync" class="tsd-kind-icon">dispatch<wbr>Async</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
+								<a href="loadoper.html#end-1" class="tsd-kind-icon">end</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="loadoper.html#execute" class="tsd-kind-icon">execute</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="loadoper.html#fault" class="tsd-kind-icon">fault</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="loadoper.html#halt" class="tsd-kind-icon">halt</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#has" class="tsd-kind-icon">has</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="loadoper.html#inithandler" class="tsd-kind-icon">init<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="loadoper.html#loadembedclass" class="tsd-kind-icon">load<wbr>Embed<wbr>Class</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#one" class="tsd-kind-icon">one</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="loadoper.html#progresshandler" class="tsd-kind-icon">progress<wbr>Handler</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="loadoper.html#result" class="tsd-kind-icon">result</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#sub" class="tsd-kind-icon">sub</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#subscribe" class="tsd-kind-icon">subscribe</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#unsub" class="tsd-kind-icon">unsub</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="loadoper.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="nonuniformeventlist.html" class="tsd-kind-icon">Non<wbr>Uniform<wbr>Event<wbr>List</a>
 					</li>
@@ -1153,126 +1564,9 @@
 					<li class=" tsd-kind-class">
 						<a href="operevent.html" class="tsd-kind-icon">Oper<wbr>Event</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="queue.html" class="tsd-kind-icon">Queue</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="queue.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="queue.html#children" class="tsd-kind-icon">children</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#continuewhenfail" class="tsd-kind-icon">continue<wbr>When<wbr>Fail</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#id" class="tsd-kind-icon">id</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#immediately" class="tsd-kind-icon">immediately</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#lastresult" class="tsd-kind-icon">last<wbr>Result</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#queue-1" class="tsd-kind-icon">queue</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#step" class="tsd-kind-icon">step</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="queue.html#end" class="tsd-kind-icon">END</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="queue.html#none" class="tsd-kind-icon">NONE</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="queue.html#run" class="tsd-kind-icon">RUN</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-								<a href="queue.html#wait" class="tsd-kind-icon">WAIT</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
-								<a href="queue.html#_defaultqueue" class="tsd-kind-icon">_default<wbr>Queue</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#count" class="tsd-kind-icon">count</a>
-							</li>
-							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
-								<a href="queue.html#defaultqueue" class="tsd-kind-icon">default<wbr>Queue</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="queue.html#_dispatch" class="tsd-kind-icon">_dispatch</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited">
-								<a href="queue.html#asevent" class="tsd-kind-icon">as<wbr>Event</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="queue.html#cleanup" class="tsd-kind-icon">cleanup</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#clear" class="tsd-kind-icon">clear</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="queue.html#commit" class="tsd-kind-icon">commit</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="queue.html#commitchild" class="tsd-kind-icon">commit<wbr>Child</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#dispatch" class="tsd-kind-icon">dispatch</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#dispatchasync" class="tsd-kind-icon">dispatch<wbr>Async</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="queue.html#doload" class="tsd-kind-icon">do<wbr>Load</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#end-1" class="tsd-kind-icon">end</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="queue.html#execute" class="tsd-kind-icon">execute</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#fault" class="tsd-kind-icon">fault</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="queue.html#halt" class="tsd-kind-icon">halt</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="queue.html#haltchild" class="tsd-kind-icon">halt<wbr>Child</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#has" class="tsd-kind-icon">has</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="queue.html#nexthandler" class="tsd-kind-icon">nexthandler</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#one" class="tsd-kind-icon">one</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#result" class="tsd-kind-icon">result</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#sub" class="tsd-kind-icon">sub</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#subscribe" class="tsd-kind-icon">subscribe</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#unsub" class="tsd-kind-icon">unsub</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="queue.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="retryoper.html" class="tsd-kind-icon">Retry<wbr>Oper</a>
 					</li>

@@ -6,6 +6,7 @@ import RetryOper from './RetryOper'
 
 /**
  * Load  Oper
+ * Load content use xmlrequest or script tag
  * @author
  *
  */
@@ -42,6 +43,8 @@ export default class LoadOper extends RetryOper {
 
     // public xhrrequest?: XMLHttpRequest | ActiveXObject =  (window.XMLHttpRequest) ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP")
     public xhrrequest: XMLHttpRequest = new XMLHttpRequest()
+
+    public scriptloader: HTMLScriptElement = document.createElement('script')
 
     private _name: string = ''
 
@@ -81,7 +84,7 @@ export default class LoadOper extends RetryOper {
     /**
      * URL for loader
      */
-    private url: string | undefined
+    private url: string = ''
 
     /**
      *
@@ -97,8 +100,14 @@ export default class LoadOper extends RetryOper {
         loadtype: string = 'script'
     ) {
         super()
-        this.xhrrequest = new XMLHttpRequest()
         this.url = url + LoadOper.postfix
+        this.type = loadtype
+        if (this.type == 'script') {
+            this.scriptloader.type = 'text/javascript'
+        } else if (this.type == 'ajax') {
+            this.xhrrequest = new XMLHttpRequest()
+        }
+
         if (rhandler != undefined)
             this.subscribe(
                 (s: Oper, event: OperEvent, ev: IEventManagement) => {
@@ -119,19 +128,29 @@ export default class LoadOper extends RetryOper {
     }
 
     /**
-     * Load right now. extension name with swf,jpg,png,gif, will use Loader load.
+     * Load right now.
      *
      */
 
     execute(): void {
         //this.xhrrequest.onreadystatechange
-        if (this.xhrrequest && this.url) {
-            this.xhrrequest.open('GET', this.url)
-            this.xhrrequest.onreadystatechange = this.changeHandler
-            this.xhrrequest.send()
-        } else {
-            console.error('url is not set or browser is not support')
+        console.log('start')
+        if (this.type == 'script') {
+            if (this.xhrrequest) {
+                this.xhrrequest.open('GET', this.url)
+                this.xhrrequest.onreadystatechange = this.changeHandler.bind(
+                    this
+                )
+                this.xhrrequest.send()
+            } else {
+                console.error('url is not set or browser is not support')
+            }
+        } else if (this.type == 'ajax') {
+            this.scriptloader.src = this.url
+            this.scriptloader.addEventListener('error', this.fault)
+            this.scriptloader.addEventListener('load', this.result)
         }
+
         super.execute()
     }
 
@@ -146,6 +165,10 @@ export default class LoadOper extends RetryOper {
             this.xhrrequest.status == 200
         ) {
             console.log('成功')
+            //console.log(this.xhrrequest.response)
+            this.result(this.xhrrequest.response)
+        } else {
+            // this.fault()
         }
     }
 
@@ -175,6 +198,7 @@ export default class LoadOper extends RetryOper {
      */
 
     get data(): any {
-        return null
+        return this.xhrrequest.response
+        console.log(this.data())
     }
 }
