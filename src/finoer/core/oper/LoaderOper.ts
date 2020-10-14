@@ -135,7 +135,8 @@ export default class LoadOper extends RetryOper {
     execute(): void {
         //this.xhrrequest.onreadystatechange
         console.log('start')
-        if (this.type == 'script') {
+        debugger
+        if (this.type == 'ajax') {
             if (this.xhrrequest) {
                 this.xhrrequest.open('GET', this.url)
                 this.xhrrequest.onreadystatechange = this.changeHandler.bind(
@@ -145,10 +146,15 @@ export default class LoadOper extends RetryOper {
             } else {
                 console.error('url is not set or browser is not support')
             }
-        } else if (this.type == 'ajax') {
+        } else if (this.type == 'script') {
             this.scriptloader.src = this.url
-            this.scriptloader.addEventListener('error', this.fault)
-            this.scriptloader.addEventListener('load', this.result)
+            this.scriptloader.addEventListener('error', this.fault.bind(this))
+            this.scriptloader.addEventListener('load', () => {
+              this.alawaySuccess = true
+            })
+
+            document.body.appendChild(this.scriptloader)
+
         }
 
         super.execute()
