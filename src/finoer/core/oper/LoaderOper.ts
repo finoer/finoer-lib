@@ -161,6 +161,7 @@ export default class LoadOper extends RetryOper {
     }
 
     changeHandler(event: Event): any {
+        console.log(event)
         if (this.xhrrequest) {
             console.log('xhr' + JSON.stringify(this.xhrrequest))
         }
@@ -179,18 +180,23 @@ export default class LoadOper extends RetryOper {
     }
 
     result(result?: any): void {
-        super.result(event)
+        console.log(result)
+        super.result(result)
     }
 
     fault(result?: any): void {
-        super.fault(event)
+        super.fault(result)
     }
 
     protected loadEmbedClass(): void {}
 
-    protected initHandler(event: Event): void {}
+    protected initHandler(event: Event): void {
+      console.log(event)
+    }
 
-    progressHandler(event: ProgressEvent): void {}
+    progressHandler(event: ProgressEvent): void {
+      console.log(event)
+    }
 
     /**
      *  Halt download progress, remove form queue.

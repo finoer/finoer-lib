@@ -153,6 +153,7 @@ export default abstract class Oper extends EventDispatcher<Oper, OperEvent>
      */
     commit(queue?: Queue): void {
         if (!this.queue) this.queue = Queue.defaultQueue
+        console.log(queue)
 
         this.queue.commitChild(this)
     }
@@ -162,7 +163,10 @@ export default abstract class Oper extends EventDispatcher<Oper, OperEvent>
      * @param event
      *
      */
-    end(event?: any): void {}
+    end(event?: any): void {
+      console.log(event)
+
+    }
 
     /**
      * Halt queue
@@ -234,7 +238,7 @@ export class Queue extends Oper {
         if (this.children.length > 0) {
             var oper: Oper = this.children[0]
             oper.subscribe((s: Oper, type: OperEvent, ev: IEventManagement) => {
-                //console.log(s, type)
+                console.log(s, type, ev)
                 if (
                     type.type == OperEvent.OPERATION_COMPLETE ||
                     type.type == OperEvent.OPERATION_ERROR
@@ -251,6 +255,7 @@ export class Queue extends Oper {
     private nexthandler(event?: OperEvent | undefined): void {
         var oper: Oper = this.children[0]
         oper.unsubscribe((s: Oper, type: OperEvent, ev: IEventManagement) => {
+            console.log(s)
             if (
                 type.type == OperEvent.OPERATION_COMPLETE ||
                 type.type == OperEvent.OPERATION_ERROR

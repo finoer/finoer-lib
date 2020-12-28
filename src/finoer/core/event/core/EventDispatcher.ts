@@ -22,6 +22,7 @@ export default class EventDispatcher<TSender, TArgs>
      * @param args The arguments object.
      */
     public dispatch(sender: TSender, args: TArgs): void {
+        console.log(sender, args)
         this._dispatch(false, this, arguments)
     }
 
@@ -31,6 +32,7 @@ export default class EventDispatcher<TSender, TArgs>
      * @param args The arguments object.
      */
     public dispatchAsync(sender: TSender, args: TArgs): void {
+        console.log(sender, args)
         this._dispatch(true, this, arguments)
     }
 
